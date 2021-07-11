@@ -3,7 +3,11 @@ import flask
 
 TEMPLATE = './template'
 STATIC = './static'
+<<<<<<< Updated upstream
 app = flask(__name__, template_folder = TEMPLATE, static_folder = STATIC)
+=======
+app = flask(__name__, template_folder = TEMPLATE, static_folder=STATIC)
+>>>>>>> Stashed changes
 @app.route('/')
 def index():
     return 'Ola mundo'
