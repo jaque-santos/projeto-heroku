@@ -1,5 +1,6 @@
 from typing import List
 from flask import Flask, render_template
+import datetime
 TEMPLATES = './templates'
 STATIC = './static'
 
@@ -11,8 +12,9 @@ def helloworld():
 
 @app.route('/index')
 def index():
+    data = datetime.datetime.now()
     nome= 'Jaqueline'
     Lista=['https://www.youtube.com/embed/3fP541Qhfd0','https://www.youtube.com/embed/CTIs_RSPr84']
-    return render_template('index.html', nome=nome, Lista=Lista )
-app.run(host='0.0.0.0', port=5000) 
+    return render_template('index.html', nome=nome, Lista=Lista, dataAtual = data)
+#app.run(host='0.0.0.0', port=5000) 
     
